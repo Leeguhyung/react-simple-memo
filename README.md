@@ -30,5 +30,5 @@ npm run start
 To preview the project, open Safari in split view and visit `localhost:3000`.
 
 ## 🚀 실행 예시\
-![Screenshot](https://raw.githubusercontent.com/leeknivoc/repo/main/example.jpg)
+![Screenshot](https://github.com/Leeguhyung/react-simple-memo/blob/main/example.jpeg)
 
