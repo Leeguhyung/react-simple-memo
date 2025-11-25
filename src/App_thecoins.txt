@@ -1,0 +1,32 @@
+import { hot } from "react-hot-loader/root";
+import React ,{useState, useEffect} from "react";
+import ReactDOM from "react-dom";
+import Button from "./Button";
+import styles from "./App.module.css"
+
+function App(){
+  const [loading, setLoading] = useState(true);
+  const [coins, setCoins] = useState([]);
+  //useState안에 아무것도 안적으면 undefined 반환함.
+  useEffect(() => {
+    fetch("https://api.coinpaprika.com/v1/tickers")
+    .then((response)=> response.json())
+    .then((json)=> {setCoins(json); setLoading(false);});
+
+  }, []);
+  return <div>
+    <h1>The Coins ({loading ? "" : coins.length}) </h1>
+    {loading ? <strong>Loading...</strong> : <select>
+      {coins.map((coin , id) => 
+      <option>
+      <li>{coin.name} ({coin.symbol}) : {coin.quotes.USD.price} USD</li>
+      </option>
+      )}
+        
+    </select>}
+    
+  </div>;
+}
+export default hot(App);
+
+
