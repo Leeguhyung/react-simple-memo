@@ -15,4 +15,16 @@ thebaselab에서 만든 ** Code App – React Starter (react-starter 템플릿) 
 - CSS
 
 ## 🚀 실행 방법
+## React 17 starter project for [Code App](https://github.com/codeapp)
+- Support hot reloading
+- Preserve states between reloads using `react-hot-loader`
 
+- "Replace the built-in src and dist folders, as well as package.json, package-lock.json, and webpack.config.js in the react-starter with the files I uploaded."
+
+To start, run these commands in the terminal:
+```
+npm i
+npm run start
+```
+
+To preview the project, open Safari in split view and visit `localhost:3000`.
